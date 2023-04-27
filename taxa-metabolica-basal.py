@@ -2,12 +2,12 @@
 # baseado na fórmula de Harris-Benedict
 
 # Informações do usuário
-sexo = input("Qual é o seu sexo (M/F)? ")
+sexo = input("Qual é o seu sexo (M/F)? ").lower()
 peso = float(input("Qual é o seu peso em kg? "))
 altura = float(input("Qual é a sua altura em cm? "))
 idade = int(input("Qual é a sua idade em anos? "))
 nivel_atividade = input("Qual é o seu nível de atividade física (sedentário, pouco ativo, moderado, muito ativo ou "
-                        "extremamente ativo)? ")
+                        "extremamente ativo)? ").lower()
 
 # Fatores de atividade física
 fatores_atividade = {
@@ -20,7 +20,7 @@ fatores_atividade = {
 fator_atividade = fatores_atividade[nivel_atividade]
 
 # Fórmula de Harris-Benedict
-if sexo == "M":
+if sexo == "m":
     tmb = 88.36 + (13.4 * peso) + (4.8 * altura) - (5.7 * idade)
 else:
     tmb = 447.6 + (9.2 * peso) + (3.1 * altura) - (4.3 * idade)
